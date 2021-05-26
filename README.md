@@ -12,7 +12,8 @@ Accedemos al servicio EMR de AWS, crear un cluster y luego seleccionamos opcione
  * Tez 0.9.2
  * HBase 2.2.5
  * Livy 0.7.0
- * Sqoop 1.4.7
+ * Sqoop 1.4.7.
+
  (Seleccionamos next)
  Dejamos la Vpc por defeecto, luego seleccionamos en los tipos de instancia los 2 primeros (maestro y principal), que vienen por defecto con m5.xlarge y los cambiamos por m4.large. En "opción de compra" seleccionamos en ambas Spot y damos next.
  
