@@ -46,12 +46,12 @@ Crearemos un usuario con nueestro nombre (en este caso friosl)-> hdfs dfs -mkdir
   
 #  3. Conexión al DCA vía interfaz gráfica AMBARI:
     Con el usuario/password de la VPN:
-    https://hdpambari.dis.eafit.edu.co
-#  3.1 Entramos con nuestro usuario y contraseña. Al lado de nuestro perfil encontramos un botón con 9 cuadros y en este seleccionaremos "Files View", este nos llevará a una lista de todas las carpetas de los usuarios de los grupos de tópicos especiales en telemática. Para llegar a nuestra carpeta podemos seleccionar el símbolo de casa que está en el lado superior izquierdo.
-  Estando en nuestro directorio crearemos una nueva carpeta con "New Folder" con el nombre de datasets. Entraremos en esa carpeta y allí subiremos los archivos de los datasets. 
+    https://hdpambari.dis.eafit.edu.co .
+ 
+Entramos con nuestro usuario y contraseña. Al lado de nuestro perfil encontramos un botón con 9 cuadros y en este seleccionaremos "Files View", este nos llevará a una lista de todas las carpetas de los usuarios de los grupos de tópicos especiales en telemática. Para llegar a nuestra carpeta podemos seleccionar el símbolo de casa que está en el lado superior izquierdo.
+ 
+Estando en nuestro directorio crearemos una nueva carpeta con "New Folder" con el nombre de datasets. Entraremos en esa carpeta y allí subiremos los archivos de los datasets. 
 #   POR TERMINAL https://hdpssh.dis.eafit.edu.co
   4. Conexión a Hue vía interfaz gráfica
   En la parte izquierda seleccionaremos s3, creamos una carpeta con el nombre de mi usuario 'friosl' y dentro de ella, una carpeta llamada datasets. 
   Para subir archivos a esta carpeta podemos escogerlos de nuestra máquina local seleccionando "upload" y después arrastrándolos o bien escogiéndolos. Cuando terminen de subirse se termina el proceso y quedan subidos consistentemente en s3.
-
-Primero, debemos seleccionar en la sección de AWS el EMR 
