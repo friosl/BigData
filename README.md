@@ -52,6 +52,6 @@ Entramos con nuestro usuario y contraseña. Al lado de nuestro perfil encontramo
  
 Estando en nuestro directorio crearemos una nueva carpeta con "New Folder" con el nombre de datasets. Entraremos en esa carpeta y allí subiremos los archivos de los datasets. 
 #   POR TERMINAL https://hdpssh.dis.eafit.edu.co
-  4. Conexión a Hue vía interfaz gráfica
+#  4. Conexión a Hue vía interfaz gráfica
   En la parte izquierda seleccionaremos s3, creamos una carpeta con el nombre de mi usuario 'friosl' y dentro de ella, una carpeta llamada datasets. 
   Para subir archivos a esta carpeta podemos escogerlos de nuestra máquina local seleccionando "upload" y después arrastrándolos o bien escogiéndolos. Cuando terminen de subirse se termina el proceso y quedan subidos consistentemente en s3.
