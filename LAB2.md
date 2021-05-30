@@ -8,13 +8,20 @@ Usaremos el siguiente código:
 
 $ pyspark
 files_rdd = sc.textFile("hdfs:///datasets/gutenberg-small/*.txt") #Archivo donde están guardados los datos 
+
 wc_unsort = files_rdd.flatMap(lambda line: line.split()).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
+
 wc = wc_unsort.sortBy(lambda a: -a[1])
+
 for tupla in wc.take(10):
+
     print(tupla)
+    
 wc.saveAsTextFile("hdfs:///tmp/frioslwcout1") #Escribir archivo
 
+
 #Escribí todo en un sólo archivo:
+
 >>> wc.coalesce(1).saveAsTextFile("hdfs:///tmp/frioslwcout2")
 
 
