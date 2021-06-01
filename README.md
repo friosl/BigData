@@ -35,15 +35,22 @@ Crearemos un usuario con nueestro nombre (en este caso friosl)-> hdfs dfs -mkdir
   
  Para verificar que se crearon correctamente, podemos usar el comando 'ls'
   -> hdfs dfs -ls /user y hdfs /dfs -ls /user/friosl.
+ 
  Luego podemos utilizar los archivos que descargamos de los datasets y que tenemos que haber subido a la máquina master del cluster, existen varias opciones, en mi caso, usé WinSCP para pasar los archivos y los metí en una carpeta llamada "datasets". Para ello, el archivo debe estar descomprimido.
  
   Para pasar archivos del EMR-master hacia hue usaremos el comando en la terminal del master: (Reemplazar "datasets" por el nombre de la carpeta donde se encuentran).
+ 
   hdfs dfs -put /datasets/* /user/<usuario>/datasets
+ 
   o
+ 
   hdfs dfs -copyFromLocal /datasets/* /user/<usuario>/datasets/
+ 
   o si el archivo se encuentra en s3
+ 
   hadoop distcp s3a://<link repo s3> /<carpeta destino>
-  
+ 
+ 
 #  3. Conexión al DCA vía interfaz gráfica AMBARI:
     Con el usuario/password de la VPN:
     https://hdpambari.dis.eafit.edu.co .
