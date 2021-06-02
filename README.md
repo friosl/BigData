@@ -46,9 +46,9 @@ Crearemos un usuario con nueestro nombre (en este caso friosl)-> hdfs dfs -mkdir
  
   hdfs dfs -copyFromLocal /datasets/* /user/<usuario>/datasets/
  
-  o si el archivo se encuentra en s3
+  o Para montar el archivo desde Files (que fue lo que montamos en el anterior, el de put) a s3 usamos
  
-  hadoop distcp s3a://<link repo s3> /<carpeta destino>
+  hadoop distcp /user/friosl/datasets/* s3a://feliper/st0263feliper/datasets
  
  
 #  3. Conexión al DCA vía interfaz gráfica AMBARI:
@@ -59,6 +59,9 @@ Entramos con nuestro usuario y contraseña. Al lado de nuestro perfil encontramo
  
 Estando en nuestro directorio crearemos una nueva carpeta con "New Folder" con el nombre de datasets. Entraremos en esa carpeta y allí subiremos los archivos de los datasets. 
 #   POR TERMINAL https://hdpssh.dis.eafit.edu.co
+ Para montar estos archivos al DCA tenemos que usar github. Clonamos los dataset y luego usamos el comando de hdfs dfs - copyFromLocal /datasets/* hacia /user/friosl/datasetssh
+ 
+ 
 #  4. Conexión a Hue vía interfaz gráfica
   En la parte izquierda seleccionaremos s3, creamos una carpeta con el nombre de mi usuario 'friosl' y dentro de ella, una carpeta llamada datasets. 
   Para subir archivos a esta carpeta podemos escogerlos de nuestra máquina local seleccionando "upload" y después arrastrándolos o bien escogiéndolos. Cuando terminen de subirse se termina el proceso y quedan subidos consistentemente en s3.
